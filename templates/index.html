@@ -1,1 +1,44 @@
-<h1>Welcome to the home page</h1>
+<!-- index.html -->
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center;
+            }
+            form {
+                display: flex;
+                justify-content: center;
+            }
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            button:hover {
+                background-color: #3e8e41;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to the home page</h1>
+            <form action="{{ url_for('predict_datapoint') }}" method="get">
+                <button type="submit">Go to Home Page For Prediction</button>
+            </form>
+        </div>
+    </body>
+</html>
